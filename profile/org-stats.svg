@@ -1,0 +1,6 @@
+<svg width="480" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="100" fill="#fffefe" stroke="#e4e2e2" rx="8"/>
+  <text x="20" y="55" font-family="sans-serif" font-size="14" fill="#767676">
+    Org stats card will appear here after the workflow runs.
+  </text>
+</svg>
