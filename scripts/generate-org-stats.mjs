@@ -167,4 +167,88 @@ function renderSvg({ org, totals, topLanguages, mergedPRs, grade }) {
         <g class="stat-row" style="animation-delay: ${150 + i * 100}ms">
           <circle cx="18" cy="${y - 5}" r="5" fill="#4c71f2" />
           <text x="34" y="${y}" class="stat-label">${esc(s.label)}</text>
-          <text x="${width - 30}" y="${y}" text-anchor="end" class="stat-value">${s.value.toLocaleStr
+          <text x="${width - 30}" y="${y}" text-anchor="end" class="stat-value">${s.value.toLocaleString()}</text>
+        </g>`;
+    })
+    .join("\n");
+
+  let barX = 30;
+  const barWidth = width - 60;
+  const barY = langBarY + 10;
+  const langSegments = topLanguages
+    .map((l) => {
+      const segW = (l.pct / 100) * barWidth;
+      const rect = `<rect x="${barX}" y="${barY}" width="${segW.toFixed(2)}" height="10" fill="${l.color}" />`;
+      barX += segW;
+      return rect;
+    })
+    .join("\n");
+
+  const langLegend = topLanguages
+    .map((l, i) => {
+      const col = i % 2;
+      const row = Math.floor(i / 2);
+      const x = 30 + col * 220;
+      const y = barY + 30 + row * 22;
+      return `
+        <g>
+          <circle cx="${x}" cy="${y - 4}" r="5" fill="${l.color}" />
+          <text x="${x + 14}" y="${y}" class="lang-label">${esc(l.name)} ${l.pct.toFixed(1)}%</text>
+        </g>`;
+    })
+    .join("\n");
+
+  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(org)} organization GitHub stats">
+  <style>
+    .card { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; }
+    .title { font-size: 20px; font-weight: 600; fill: #2f2f2f; }
+    .stat-label { font-size: 13px; fill: #434d58; }
+    .stat-value { font-size: 13px; font-weight: 600; fill: #2f2f2f; }
+    .lang-label { font-size: 11px; fill: #434d58; }
+    .grade-text { font-size: 22px; font-weight: 700; fill: #4c71f2; }
+    .grade-caption { font-size: 10px; fill: #767676; }
+    .stat-row { opacity: 0; animation: fadein 0.4s ease-in-out forwards; }
+    @keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+  <rect x="0.5" y="0.5" rx="8" width="${width - 1}" height="${height - 1}" fill="#fffefe" stroke="#e4e2e2" />
+  <g class="card">
+    <text x="30" y="42" class="title">${esc(org)} &middot; Organization Stats</text>
+
+    <circle cx="${width - 60}" cy="46" r="26" fill="none" stroke="#e6e6e6" stroke-width="3" />
+    <circle cx="${width - 60}" cy="46" r="26" fill="none" stroke="#4c71f2" stroke-width="3" stroke-dasharray="163" stroke-dashoffset="40" transform="rotate(-90 ${width - 60} 46)" />
+    <text x="${width - 60}" y="52" text-anchor="middle" class="grade-text">${esc(grade)}</text>
+
+    ${statRows}
+
+    <text x="30" y="${langBarY - 5}" class="stat-label" style="font-weight:600">Top Languages</text>
+    <rect x="30" y="${barY}" width="${barWidth}" height="10" rx="5" fill="#e9e9e9" />
+    ${langSegments}
+    ${langLegend}
+  </g>
+</svg>`;
+}
+
+async function main() {
+  console.log(`Fetching repos for org "${ORG}"...`);
+  const repos = await fetchAllRepos();
+  console.log(`Found ${repos.length} repos. Fetching merged PR count...`);
+  const mergedPRs = await fetchMergedPRCount();
+
+  const { totals, topLanguages } = aggregate(repos);
+  const grade = computeGrade(totals);
+
+  const svg = renderSvg({ org: ORG, totals, topLanguages, mergedPRs, grade });
+
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  await fs.mkdir(path.dirname(OUT_FILE), { recursive: true });
+  await fs.writeFile(OUT_FILE, svg, "utf8");
+
+  console.log(`Wrote ${OUT_FILE}`);
+  console.log(totals);
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
