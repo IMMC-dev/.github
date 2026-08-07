@@ -10,7 +10,7 @@
   </style>
   <rect x="0.5" y="0.5" rx="8" width="479" height="304" fill="#fffefe" stroke="#e4e2e2" />
   <g class="card">
-    <text x="30" y="42" class="title">IMMC-dev &middot; Organization Stats</text>
+    <text x="30" y="42" class="title">IMMC-dev &#183; Organization Stats</text>
 
     <circle cx="420" cy="46" r="26" fill="none" stroke="#e6e6e6" stroke-width="3" />
     <circle cx="420" cy="46" r="26" fill="none" stroke="#4c71f2" stroke-width="3" stroke-dasharray="163" stroke-dashoffset="40" transform="rotate(-90 420 46)" />
@@ -50,10 +50,10 @@
     <text x="30" y="240" class="stat-label" style="font-weight:600">Top Languages</text>
     <rect x="30" y="255" width="420" height="10" rx="5" fill="#e9e9e9" />
     <rect x="30" y="255" width="312.75" height="10" fill="#f1e05a" />
-<rect x="342.7534842319" y="255" width="56.54" height="10" fill="#3178c6" />
-<rect x="399.29320782386515" y="255" width="23.66" height="10" fill="#e34c26" />
-<rect x="422.9581780964752" y="255" width="8.28" height="10" fill="#3572A5" />
-<rect x="431.2408601542251" y="255" width="7.99" height="10" fill="#41b883" />
+<rect x="342.7514186450119" y="255" width="56.54" height="10" fill="#3178c6" />
+<rect x="399.2922312020671" y="255" width="23.67" height="10" fill="#e34c26" />
+<rect x="422.95765726619595" y="255" width="8.28" height="10" fill="#3572A5" />
+<rect x="431.24049884986925" y="255" width="7.99" height="10" fill="#41b883" />
     
         <g>
           <circle cx="30" cy="281" r="5" fill="#f1e05a" />
