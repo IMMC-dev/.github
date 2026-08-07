@@ -1,6 +1,85 @@
-<svg width="480" height="100" xmlns="http://www.w3.org/2000/svg">
-  <rect width="480" height="100" fill="#fffefe" stroke="#e4e2e2" rx="8"/>
-  <text x="20" y="55" font-family="sans-serif" font-size="14" fill="#767676">
-    Org stats card will appear here after the workflow runs.
-  </text>
+<svg width="480" height="305" viewBox="0 0 480 305" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IMMC-dev organization GitHub stats">
+  <style>
+    .card { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; }
+    .title { font-size: 20px; font-weight: 600; fill: #2f2f2f; }
+    .stat-label { font-size: 13px; fill: #434d58; }
+    .stat-value { font-size: 13px; font-weight: 600; fill: #2f2f2f; }
+    .lang-label { font-size: 11px; fill: #434d58; }
+    .grade-text { font-size: 22px; font-weight: 700; fill: #4c71f2; }
+    .grade-caption { font-size: 10px; fill: #767676; }
+    .stat-row { opacity: 0; animation: fadein 0.4s ease-in-out forwards; }
+    @keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+  <rect x="0.5" y="0.5" rx="8" width="479" height="304" fill="#fffefe" stroke="#e4e2e2" />
+  <g class="card">
+    <text x="30" y="42" class="title">IMMC-dev &middot; Organization Stats</text>
+
+    <circle cx="420" cy="46" r="26" fill="none" stroke="#e6e6e6" stroke-width="3" />
+    <circle cx="420" cy="46" r="26" fill="none" stroke="#4c71f2" stroke-width="3" stroke-dasharray="163" stroke-dashoffset="40" transform="rotate(-90 420 46)" />
+    <text x="420" y="52" text-anchor="middle" class="grade-text">C</text>
+
+    
+        <g class="stat-row" style="animation-delay: 150ms">
+          <circle cx="18" cy="85" r="5" fill="#4c71f2" />
+          <text x="34" y="90" class="stat-label">Total Stars</text>
+          <text x="450" y="90" text-anchor="end" class="stat-value">0</text>
+        </g>
+
+        <g class="stat-row" style="animation-delay: 250ms">
+          <circle cx="18" cy="110" r="5" fill="#4c71f2" />
+          <text x="34" y="115" class="stat-label">Total Forks</text>
+          <text x="450" y="115" text-anchor="end" class="stat-value">0</text>
+        </g>
+
+        <g class="stat-row" style="animation-delay: 350ms">
+          <circle cx="18" cy="135" r="5" fill="#4c71f2" />
+          <text x="34" y="140" class="stat-label">Public Repos</text>
+          <text x="450" y="140" text-anchor="end" class="stat-value">11</text>
+        </g>
+
+        <g class="stat-row" style="animation-delay: 450ms">
+          <circle cx="18" cy="160" r="5" fill="#4c71f2" />
+          <text x="34" y="165" class="stat-label">Open Issues</text>
+          <text x="450" y="165" text-anchor="end" class="stat-value">0</text>
+        </g>
+
+        <g class="stat-row" style="animation-delay: 550ms">
+          <circle cx="18" cy="185" r="5" fill="#4c71f2" />
+          <text x="34" y="190" class="stat-label">Merged PRs</text>
+          <text x="450" y="190" text-anchor="end" class="stat-value">1</text>
+        </g>
+
+    <text x="30" y="240" class="stat-label" style="font-weight:600">Top Languages</text>
+    <rect x="30" y="255" width="420" height="10" rx="5" fill="#e9e9e9" />
+    <rect x="30" y="255" width="312.73" height="10" fill="#f1e05a" />
+<rect x="342.72525918511354" y="255" width="56.55" height="10" fill="#3178c6" />
+<rect x="399.27986285343593" y="255" width="23.67" height="10" fill="#e34c26" />
+<rect x="422.95106125279085" y="255" width="8.28" height="10" fill="#3572A5" />
+<rect x="431.23592313975877" y="255" width="7.99" height="10" fill="#41b883" />
+    
+        <g>
+          <circle cx="30" cy="281" r="5" fill="#f1e05a" />
+          <text x="44" y="285" class="lang-label">JavaScript 74.5%</text>
+        </g>
+
+        <g>
+          <circle cx="250" cy="281" r="5" fill="#3178c6" />
+          <text x="264" y="285" class="lang-label">TypeScript 13.5%</text>
+        </g>
+
+        <g>
+          <circle cx="30" cy="303" r="5" fill="#e34c26" />
+          <text x="44" y="307" class="lang-label">HTML 5.6%</text>
+        </g>
+
+        <g>
+          <circle cx="250" cy="303" r="5" fill="#3572A5" />
+          <text x="264" y="307" class="lang-label">Python 2.0%</text>
+        </g>
+
+        <g>
+          <circle cx="30" cy="325" r="5" fill="#41b883" />
+          <text x="44" y="329" class="lang-label">Vue 1.9%</text>
+        </g>
+  </g>
 </svg>
