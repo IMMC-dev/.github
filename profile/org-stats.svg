@@ -1,83 +1,88 @@
-<svg width="480" height="305" viewBox="0 0 480 305" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IMMC-dev organization GitHub stats">
+<svg width="480" height="293" viewBox="0 0 480 293" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IMMC-dev organization GitHub stats">
   <style>
     .card { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; }
-    .title { font-size: 20px; font-weight: 600; fill: #2f2f2f; }
     .stat-label { font-size: 13px; fill: #434d58; }
     .stat-value { font-size: 13px; font-weight: 600; fill: #2f2f2f; }
     .lang-label { font-size: 11px; fill: #434d58; }
-    .grade-text { font-size: 22px; font-weight: 700; fill: #4c71f2; }
-    .grade-caption { font-size: 10px; fill: #767676; }
   </style>
-  <rect x="0.5" y="0.5" rx="8" width="479" height="304" fill="#fffefe" stroke="#e4e2e2" />
+  <rect x="0.5" y="0.5" rx="8" width="479" height="292" fill="#fffefe" stroke="#e4e2e2" />
   <g class="card">
-    <text x="30" y="42" class="title">IMMC-dev &#183; Organization Stats</text>
-
-    <circle cx="420" cy="46" r="26" fill="none" stroke="#e6e6e6" stroke-width="3" />
-    <circle cx="420" cy="46" r="26" fill="none" stroke="#4c71f2" stroke-width="3" stroke-dasharray="163" stroke-dashoffset="40" transform="rotate(-90 420 46)" />
-    <text x="420" y="52" text-anchor="middle" class="grade-text">C</text>
-
-    
-        <g class="stat-row">
-          <circle cx="18" cy="85" r="5" fill="#4c71f2" />
-          <text x="34" y="90" class="stat-label">Total Stars</text>
-          <text x="450" y="90" text-anchor="end" class="stat-value">0</text>
-        </g>
-
-        <g class="stat-row">
-          <circle cx="18" cy="110" r="5" fill="#4c71f2" />
-          <text x="34" y="115" class="stat-label">Total Forks</text>
-          <text x="450" y="115" text-anchor="end" class="stat-value">0</text>
-        </g>
-
-        <g class="stat-row">
-          <circle cx="18" cy="135" r="5" fill="#4c71f2" />
-          <text x="34" y="140" class="stat-label">Public Repos</text>
-          <text x="450" y="140" text-anchor="end" class="stat-value">11</text>
-        </g>
-
-        <g class="stat-row">
-          <circle cx="18" cy="160" r="5" fill="#4c71f2" />
-          <text x="34" y="165" class="stat-label">Open Issues</text>
-          <text x="450" y="165" text-anchor="end" class="stat-value">0</text>
-        </g>
-
-        <g class="stat-row">
-          <circle cx="18" cy="185" r="5" fill="#4c71f2" />
-          <text x="34" y="190" class="stat-label">Merged PRs</text>
-          <text x="450" y="190" text-anchor="end" class="stat-value">1</text>
-        </g>
-
-    <text x="30" y="240" class="stat-label" style="font-weight:600">Top Languages</text>
-    <rect x="30" y="255" width="420" height="10" rx="5" fill="#e9e9e9" />
-    <rect x="30" y="255" width="312.75" height="10" fill="#f1e05a" />
-<rect x="342.7514186450119" y="255" width="56.54" height="10" fill="#3178c6" />
-<rect x="399.2922312020671" y="255" width="23.67" height="10" fill="#e34c26" />
-<rect x="422.95765726619595" y="255" width="8.28" height="10" fill="#3572A5" />
-<rect x="431.24049884986925" y="255" width="7.99" height="10" fill="#41b883" />
     
         <g>
-          <circle cx="30" cy="281" r="5" fill="#f1e05a" />
-          <text x="44" y="285" class="lang-label">JavaScript 74.5%</text>
+          <g transform="translate(12, 19)"><g transform="scale(0.5)">
+         <path fill="#cc0000" d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"></path>
+         </g></g>
+          <text x="34" y="30" class="stat-label">Total Stars</text>
+          <text x="450" y="30" text-anchor="end" class="stat-value">0</text>
         </g>
 
         <g>
-          <circle cx="250" cy="281" r="5" fill="#3178c6" />
-          <text x="264" y="285" class="lang-label">TypeScript 13.5%</text>
+          <g transform="translate(12, 44)"><g transform="scale(0.5)">
+         <path fill="#cc0000" d="M8.75 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM15 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm-12.5 0a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5ZM12 21a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 12 21Zm6.25-14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 6.5Z"></path>
+         <path fill="#cc0000" d="M6.5 7.75v1A2.25 2.25 0 0 0 8.75 11h6.5a2.25 2.25 0 0 0 2.25-2.25v-1H19v1a3.75 3.75 0 0 1-3.75 3.75h-6.5A3.75 3.75 0 0 1 5 8.75v-1Z"></path>
+         <path fill="#cc0000" d="M11.25 16.25v-5h1.5v5h-1.5Z"></path>
+         </g></g>
+          <text x="34" y="55" class="stat-label">Total Forks</text>
+          <text x="450" y="55" text-anchor="end" class="stat-value">0</text>
         </g>
 
         <g>
-          <circle cx="30" cy="303" r="5" fill="#e34c26" />
-          <text x="44" y="307" class="lang-label">HTML 5.6%</text>
+          <g transform="translate(12, 69)"><g transform="scale(0.5)">
+         <path fill="#cc0000" d="M3 2.75A2.75 2.75 0 0 1 5.75 0h14.5a.75.75 0 0 1 .75.75v20.5a.75.75 0 0 1-.75.75h-6a.75.75 0 0 1 0-1.5h5.25v-4H6A1.5 1.5 0 0 0 4.5 18v.75c0 .716.43 1.334 1.05 1.605a.75.75 0 0 1-.6 1.374A3.251 3.251 0 0 1 3 18.75ZM19.5 1.5H5.75c-.69 0-1.25.56-1.25 1.25v12.651A2.989 2.989 0 0 1 6 15h13.5Z"></path>
+         <path fill="#cc0000" d="M7 18.25a.25.25 0 0 1 .25-.25h5a.25.25 0 0 1 .25.25v5.01a.25.25 0 0 1-.397.201l-2.206-1.604a.25.25 0 0 0-.294 0L7.397 23.46a.25.25 0 0 1-.397-.2v-5.01Z"></path>
+         </g></g>
+          <text x="34" y="80" class="stat-label">Public Repos</text>
+          <text x="450" y="80" text-anchor="end" class="stat-value">11</text>
         </g>
 
         <g>
-          <circle cx="250" cy="303" r="5" fill="#3572A5" />
-          <text x="264" y="307" class="lang-label">Python 2.0%</text>
+          <g transform="translate(12, 94)"><g transform="scale(0.5)">
+          <path fill="#cc0000" d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Zm9.5 2a2 2 0 1 1-.001-3.999A2 2 0 0 1 12 14Z"></path>
+          </g></g>
+          <text x="34" y="105" class="stat-label">Open Issues</text>
+          <text x="450" y="105" text-anchor="end" class="stat-value">0</text>
         </g>
 
         <g>
-          <circle cx="30" cy="325" r="5" fill="#41b883" />
-          <text x="44" y="329" class="lang-label">Vue 1.9%</text>
+          <g transform="translate(12, 119)"><g transform="scale(0.5)">
+       <path fill="#cc0000" d="M16 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm-14.5 0a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM4.75 3a1.75 1.75 0 1 0 .001 3.501A1.75 1.75 0 0 0 4.75 3Zm0 14.5a1.75 1.75 0 1 0 .001 3.501A1.75 1.75 0 0 0 4.75 17.5Zm14.5 0a1.75 1.75 0 1 0 .001 3.501 1.75 1.75 0 0 0-.001-3.501Z"></path>
+       <path fill="#cc0000" d="M13.405 1.72a.75.75 0 0 1 0 1.06L12.185 4h4.065A3.75 3.75 0 0 1 20 7.75v8.75a.75.75 0 0 1-1.5 0V7.75a2.25 2.25 0 0 0-2.25-2.25h-4.064l1.22 1.22a.75.75 0 0 1-1.061 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0ZM4.75 7.25A.75.75 0 0 1 5.5 8v8A.75.75 0 0 1 4 16V8a.75.75 0 0 1 .75-.75Z"></path>
+       </g></g>
+          <text x="34" y="130" class="stat-label">Merged PRs</text>
+          <text x="450" y="130" text-anchor="end" class="stat-value">1</text>
+        </g>
+
+    <text x="30" y="180" class="stat-label" style="font-weight:600">Top Languages</text>
+    <rect x="30" y="195" width="420" height="10" rx="5" fill="#e9e9e9" />
+    <rect x="30" y="195" width="312.77" height="10" fill="#f1e05a" />
+<rect x="342.768891518088" y="195" width="56.53" height="10" fill="#3178c6" />
+<rect x="399.30049248064995" y="195" width="23.66" height="10" fill="#e34c26" />
+<rect x="422.9620629880834" y="195" width="8.28" height="10" fill="#3572A5" />
+<rect x="431.2435551362875" y="195" width="7.99" height="10" fill="#41b883" />
+    
+        <g>
+          <circle cx="30" cy="221" r="5" fill="#f1e05a" />
+          <text x="44" y="225" class="lang-label">JavaScript 74.5%</text>
+        </g>
+
+        <g>
+          <circle cx="250" cy="221" r="5" fill="#3178c6" />
+          <text x="264" y="225" class="lang-label">TypeScript 13.5%</text>
+        </g>
+
+        <g>
+          <circle cx="30" cy="243" r="5" fill="#e34c26" />
+          <text x="44" y="247" class="lang-label">HTML 5.6%</text>
+        </g>
+
+        <g>
+          <circle cx="250" cy="243" r="5" fill="#3572A5" />
+          <text x="264" y="247" class="lang-label">Python 2.0%</text>
+        </g>
+
+        <g>
+          <circle cx="30" cy="265" r="5" fill="#41b883" />
+          <text x="44" y="269" class="lang-label">Vue 1.9%</text>
         </g>
   </g>
 </svg>
