@@ -1,3 +1,3 @@
 # Immortal MC
 
-![Org stats](./org-stats.svg)
+![Org stats](org-stats.svg)
