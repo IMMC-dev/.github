@@ -210,7 +210,7 @@ function renderSvg({ org, totals, topLanguages, mergedPRs, grade }) {
   </style>
   <rect x="0.5" y="0.5" rx="8" width="${width - 1}" height="${height - 1}" fill="#fffefe" stroke="#e4e2e2" />
   <g class="card">
-    <text x="30" y="42" class="title">${esc(org)} &middot; Organization Stats</text>
+    <text x="30" y="42" class="title">${esc(org)} &#183; Organization Stats</text>
 
     <circle cx="${width - 60}" cy="46" r="26" fill="none" stroke="#e6e6e6" stroke-width="3" />
     <circle cx="${width - 60}" cy="46" r="26" fill="none" stroke="#4c71f2" stroke-width="3" stroke-dasharray="163" stroke-dashoffset="40" transform="rotate(-90 ${width - 60} 46)" />
