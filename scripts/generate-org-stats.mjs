@@ -164,7 +164,7 @@ function renderSvg({ org, totals, topLanguages, mergedPRs, grade }) {
     .map((s, i) => {
       const y = statsStartY + i * rowH;
       return `
-        <g class="stat-row" style="animation-delay: ${150 + i * 100}ms">
+        <g class="stat-row">
           <circle cx="18" cy="${y - 5}" r="5" fill="#4c71f2" />
           <text x="34" y="${y}" class="stat-label">${esc(s.label)}</text>
           <text x="${width - 30}" y="${y}" text-anchor="end" class="stat-value">${s.value.toLocaleString()}</text>
@@ -207,8 +207,6 @@ function renderSvg({ org, totals, topLanguages, mergedPRs, grade }) {
     .lang-label { font-size: 11px; fill: #434d58; }
     .grade-text { font-size: 22px; font-weight: 700; fill: #4c71f2; }
     .grade-caption { font-size: 10px; fill: #767676; }
-    .stat-row { opacity: 0; animation: fadein 0.4s ease-in-out forwards; }
-    @keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
   </style>
   <rect x="0.5" y="0.5" rx="8" width="${width - 1}" height="${height - 1}" fill="#fffefe" stroke="#e4e2e2" />
   <g class="card">
