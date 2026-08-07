@@ -7,8 +7,6 @@
     .lang-label { font-size: 11px; fill: #434d58; }
     .grade-text { font-size: 22px; font-weight: 700; fill: #4c71f2; }
     .grade-caption { font-size: 10px; fill: #767676; }
-    .stat-row { opacity: 0; animation: fadein 0.4s ease-in-out forwards; }
-    @keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
   </style>
   <rect x="0.5" y="0.5" rx="8" width="479" height="304" fill="#fffefe" stroke="#e4e2e2" />
   <g class="card">
@@ -19,31 +17,31 @@
     <text x="420" y="52" text-anchor="middle" class="grade-text">C</text>
 
     
-        <g class="stat-row" style="animation-delay: 150ms">
+        <g class="stat-row">
           <circle cx="18" cy="85" r="5" fill="#4c71f2" />
           <text x="34" y="90" class="stat-label">Total Stars</text>
           <text x="450" y="90" text-anchor="end" class="stat-value">0</text>
         </g>
 
-        <g class="stat-row" style="animation-delay: 250ms">
+        <g class="stat-row">
           <circle cx="18" cy="110" r="5" fill="#4c71f2" />
           <text x="34" y="115" class="stat-label">Total Forks</text>
           <text x="450" y="115" text-anchor="end" class="stat-value">0</text>
         </g>
 
-        <g class="stat-row" style="animation-delay: 350ms">
+        <g class="stat-row">
           <circle cx="18" cy="135" r="5" fill="#4c71f2" />
           <text x="34" y="140" class="stat-label">Public Repos</text>
           <text x="450" y="140" text-anchor="end" class="stat-value">11</text>
         </g>
 
-        <g class="stat-row" style="animation-delay: 450ms">
+        <g class="stat-row">
           <circle cx="18" cy="160" r="5" fill="#4c71f2" />
           <text x="34" y="165" class="stat-label">Open Issues</text>
           <text x="450" y="165" text-anchor="end" class="stat-value">0</text>
         </g>
 
-        <g class="stat-row" style="animation-delay: 550ms">
+        <g class="stat-row">
           <circle cx="18" cy="185" r="5" fill="#4c71f2" />
           <text x="34" y="190" class="stat-label">Merged PRs</text>
           <text x="450" y="190" text-anchor="end" class="stat-value">1</text>
@@ -51,11 +49,11 @@
 
     <text x="30" y="240" class="stat-label" style="font-weight:600">Top Languages</text>
     <rect x="30" y="255" width="420" height="10" rx="5" fill="#e9e9e9" />
-    <rect x="30" y="255" width="312.73" height="10" fill="#f1e05a" />
-<rect x="342.72525918511354" y="255" width="56.55" height="10" fill="#3178c6" />
-<rect x="399.27986285343593" y="255" width="23.67" height="10" fill="#e34c26" />
-<rect x="422.95106125279085" y="255" width="8.28" height="10" fill="#3572A5" />
-<rect x="431.23592313975877" y="255" width="7.99" height="10" fill="#41b883" />
+    <rect x="30" y="255" width="312.75" height="10" fill="#f1e05a" />
+<rect x="342.7534842319" y="255" width="56.54" height="10" fill="#3178c6" />
+<rect x="399.29320782386515" y="255" width="23.66" height="10" fill="#e34c26" />
+<rect x="422.9581780964752" y="255" width="8.28" height="10" fill="#3572A5" />
+<rect x="431.2408601542251" y="255" width="7.99" height="10" fill="#41b883" />
     
         <g>
           <circle cx="30" cy="281" r="5" fill="#f1e05a" />
