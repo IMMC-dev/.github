@@ -161,7 +161,7 @@ function renderSvg({ org, totals, topLanguages, mergedPRs }) {
   const stats = [
     { icon: "star", label: "Total Stars", value: totals.stars },
     { icon: "fork", label: "Total Forks", value: totals.forks },
-    { icon: "repo", label: "Public Repos", value: totals.repoCount },
+    { icon: "repo", label: "Repos", value: totals.repoCount },
     { icon: "issue", label: "Open Issues", value: totals.openIssues },
     { icon: "pr", label: "Merged PRs", value: mergedPRs },
   ];
