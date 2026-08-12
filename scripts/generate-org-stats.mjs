@@ -47,6 +47,13 @@ const REPO_PAGE_QUERY = `
         pageInfo { hasNextPage endCursor }
         nodes {
           name
+          defaultBranchRef {
+            target {
+              ... on Commit {
+                history { totalCount }
+              }
+            }
+          }
           stargazerCount
           forkCount
           issues(states: OPEN) { totalCount }
@@ -93,14 +100,14 @@ async function fetchMergedPRCount() {
 function aggregate(repos) {
   const totals = {
     repoCount: repos.length,
-    stars: 0,
+    commits: 0,
     forks: 0,
     openIssues: 0,
   };
   const languageBytes = new Map(); // name -> { size, color }
 
   for (const repo of repos) {
-    totals.stars += repo.stargazerCount;
+    totals.commits += repo.defaultBranchRef?.target?.history?.totalCount || 0;
     totals.forks += repo.forkCount;
     totals.openIssues += repo.issues.totalCount;
 
@@ -133,8 +140,8 @@ function esc(str) {
 }
 
 const STAT_ICONS = {
-  star: `<g transform="scale(0.5)">
-         <path fill="#cc0000" d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"></path>
+  commit: `<g transform="scale(0.5)">
+         <path d="M16.944 11h4.306a.75.75 0 0 1 0 1.5h-4.306a5.001 5.001 0 0 1-9.888 0H2.75a.75.75 0 0 1 0-1.5h4.306a5.001 5.001 0 0 1 9.888 0Zm-1.444.75a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0Z"></path>
          </g>`,
   fork: `<g transform="scale(0.5)">
          <path fill="#cc0000" d="M8.75 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM15 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm-12.5 0a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5ZM12 21a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 12 21Zm6.25-14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 6.5Z"></path>
@@ -159,7 +166,7 @@ function renderSvg({ org, totals, topLanguages, mergedPRs }) {
   const rowH = 25;
   const statsStartY = 30;
   const stats = [
-    { icon: "star", label: "Total Stars", value: totals.stars },
+    { icon: "commit", label: "Total Commits", value: totals.commits },
     { icon: "fork", label: "Total Forks", value: totals.forks },
     { icon: "repo", label: "Repos", value: totals.repoCount },
     { icon: "issue", label: "Open Issues", value: totals.openIssues },
