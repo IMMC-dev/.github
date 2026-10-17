@@ -13,7 +13,7 @@
          <path fill="#cc0000" d="M16.944 11h4.306a.75.75 0 0 1 0 1.5h-4.306a5.001 5.001 0 0 1-9.888 0H2.75a.75.75 0 0 1 0-1.5h4.306a5.001 5.001 0 0 1 9.888 0Zm-1.444.75a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0Z"></path>
          </g></g>
           <text x="34" y="30" class="stat-label">Total Commits</text>
-          <text x="450" y="30" text-anchor="end" class="stat-value">714</text>
+          <text x="450" y="30" text-anchor="end" class="stat-value">716</text>
         </g>
 
         <g>
@@ -54,11 +54,11 @@
 
     <text x="30" y="180" class="stat-label" style="font-weight:600">Top Languages</text>
     <rect x="30" y="195" width="420" height="10" rx="5" fill="#e9e9e9" />
-    <rect x="30" y="195" width="312.16" height="10" fill="#f1e05a" />
-<rect x="342.1581981421236" y="195" width="56.42" height="10" fill="#3178c6" />
-<rect x="398.58018530514073" y="195" width="23.71" height="10" fill="#e34c26" />
-<rect x="422.2898248636026" y="195" width="8.35" height="10" fill="#3572A5" />
-<rect x="430.63742941891" y="195" width="7.98" height="10" fill="#41b883" />
+    <rect x="30" y="195" width="312.06" height="10" fill="#f1e05a" />
+<rect x="342.0561632789037" y="195" width="56.40" height="10" fill="#3178c6" />
+<rect x="398.45970783885275" y="195" width="23.70" height="10" fill="#e34c26" />
+<rect x="422.1615974492314" y="195" width="8.48" height="10" fill="#3572A5" />
+<rect x="430.6437584445534" y="195" width="7.97" height="10" fill="#41b883" />
     
         <g>
           <circle cx="30" cy="221" r="5" fill="#f1e05a" />
